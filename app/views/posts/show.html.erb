@@ -19,9 +19,11 @@
 <p>
   <strong>Images:</strong>
   <br>
+  <div class="img-responsive" alt="Responsive image">
   <% @post.images.each do |image| %>
     <%= image_tag(image) %>
   <% end %>
+  </div>
 </p>
 <% end %>
 <%= link_to 'Edit', edit_post_path(@post) %> |

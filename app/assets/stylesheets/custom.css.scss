@@ -4,11 +4,17 @@ $navbar-default-bg: #2B242A;
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+img{
+  max-width: 80%;
+  max-height: 800px;
+}
 .btn-xlarge{
   font-size: 1.7em;
   background-color: #2B242A;
   border: 0px;
-  
+}
+.btn-xs:visited{
+  color: #fff
 }
 
 .btn-xlarge:hover{
