@@ -14,18 +14,22 @@
   <strong>Body:</strong>
   <%= @post.body %>
 </p>
-
+<div class="images_container">
 <% if @post.images.attached? %>
 <p>
   <strong>Images:</strong>
-  <br>
-  <div class="img-responsive" alt="Responsive image">
-  <% @post.images.each do |image| %>
-    <%= image_tag(image) %>
-  <% end %>
-  </div>
 </p>
+  <br>
+ <div id="gallery">
+  <ul id="grid">
+    <% @post.images.each do |image| %>
+      <li><%= link_to image_tag(image), image %><li>
+    <% end %>
+  </ul>
+</div>
+
 <% end %>
+</div>
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
 
