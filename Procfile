@@ -1,2 +1,1 @@
-web: bundle exec rails server -p $PORT
-worker: npm install
+web: bundle exec npm start rails server -p $PORT
