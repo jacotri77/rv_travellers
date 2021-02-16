@@ -5,8 +5,8 @@
         <div class="post-title">
           <%= link_to post.title, post_path(post) %>
         </div>
-        <div class="post-body">
-          <%= truncate( sanitize post.body, length: 100) %>
+        <div class="post-body" id="post_body">
+          <%= truncate( post.body, length: 100) %>
           <div class ="post-meta-details">
             <small>Created by: <%= post.author if post.author %>,
                   <%= time_ago_in_words(post.created_at) %> ago,
